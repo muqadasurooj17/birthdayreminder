@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*::before,*::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: #161616;
+    --color-dark : #343a40;
+    --color-light: #f5f3f4;
+    --panelColor: #f5e38b;
+    --active : #98f8de;
+}
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.container::before{
+    top:-100px;
+    left: 50px;
+    background: linear-gradient(#f0f,#f00);
+    clip-path: circle(20% at 25% 30%);
+}
+
+.container::after{
+    top: 60px;
+    left:20x;
+    background: linear-gradient(#e91e63,#2196f3);
+    clip-path: circle(20% at 70% 65%);
+}
+.card-wrapper {
+    position: relative; display: grid;
+    text-align: center;
+    z-index: 1;
+    width: 90%;
+    height:90%;
+    box-shadow: 20px 20px 50px 50px rgba(e, e, e, 0.5);
+ border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
+    margin: 70px;
+    }
+
+
+.heading{
+        font-size: 1.em;
+        color: #fff;
+        font-weight: 600px;
+        align-items: center;
+        flex-direction: row;
+        font-size: 70px;
+        font-weight: bolder;
+        }
+        .today{
+            font-size: 1.em;
+            color: #fff;
+            font-weight: 300;
+            align-items: center;
+            flex-direction: row;
+        }
+        .upcoming{
+            font-size: 1.em;
+            color: #fff;
+            font-weight: 300;
+            align-items: center;
+            flex-direction: row;
+            margin: 5px;
+        }
+        .upcoming >li{
+            background-color: var(--panelColor);
+        }
+ul{
+    list-style-type:none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+ .detail{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 1em;
+    text-align: left;
+    background-color: var(--active);
+    padding: .8em 0;
+    border-radius: 10px;
+    box-shadow: 1px 10px 20px #e9ebee59;
+}
+
+ul > li img{
+    border-radius: 30%;
+    width: 20%;
+}
+.name{
+text-size-adjust: var(--color-dark);
+font-size: 20px;
+
+    };
+
+    @media screen and (max-device-width: 640px){
+        .detail{
+            flex-direction: column;
+            display: flex ;
+          }}
